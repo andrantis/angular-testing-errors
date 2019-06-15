@@ -1,0 +1,26 @@
+<ng-container *ngFor="let error of errors; index as i">
+<mat-toolbar color="warn" class="mat-elevation-z6">
+  <span class="error-text">{{error.text}} ({{error.code}})</span>
+  <span class="spacer"></span>
+  <span>
+    <button mat-icon-button (click)="removeError(i)">
+      <mat-icon>close</mat-icon>
+    </button> 
+  </span>
+  
+  </mat-toolbar>
+</ng-container> 
+
+<mat-toolbar color="primary" class="mat-elevation-z6">
+	<span>Some Title</span>
+</mat-toolbar>
+
+
+<div>
+
+
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+</div>
