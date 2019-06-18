@@ -1,6 +1,8 @@
-<ng-container *ngFor="let error of errors; index as i">
-<mat-toolbar color="warn" class="mat-elevation-z6">
-  <span class="error-text">{{error.text}} ({{error.code}})</span>
+<!-- <ng-container *ngFor="let error of errors$ | async; index as i"> -->
+<ng-container>
+	<!-- <mat-toolbar *ngFor="let error of errors; index as i" [@EnterLeave]="'flyIn'" color="warn" class="mat-elevation-z6"> -->
+	<mat-toolbar *ngFor="let error of errors; index as i" [@fadeInOut] color="warn" class="mat-elevation-z6">
+		<span class="error-text">{{error.text}} ({{error.code}})</span>
   <span class="spacer"></span>
   <span>
     <button mat-icon-button (click)="removeError(i)">
